@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import './key';
 import Axios from 'axios';
 import RecipeTile from './RecipeTile';
 
@@ -18,6 +17,7 @@ function App() {
     var result = await Axios.get(url);
     setRecipes(result.data.hits);
     console.log(result.data.hits)
+
   }
   const handleChange = (e) => {
     setQuery(e.target.value);
